@@ -36,7 +36,7 @@ public class ModifyEditorStyle
         }
     }
 
-    private static int smallFontSize 
+    private static int smallFontSize
     {
         get{
             return EditorPrefs.GetInt("ModifyEditorStyle_SmallFontSize",9);
@@ -46,7 +46,7 @@ public class ModifyEditorStyle
         }
     }
 
-    private static int bigFontSize 
+    private static int bigFontSize
     {
         get{
             return EditorPrefs.GetInt("ModifyEditorStyle_BigFontSize",12);
@@ -110,7 +110,7 @@ public class ModifyEditorStyle
         }
     }
 
-    private static IEnumerable<GUIStyle> GUISkinStyles 
+    private static IEnumerable<GUIStyle> GUISkinStyles
     {
         get
         {
@@ -243,11 +243,12 @@ public class ModifyEditorStyle
 
         }
     }
-    
+
 #if UNITY_2018_3_OR_NEWER
     private class ModifyEditorStyleProvider : SettingsProvider
     {
-        public ModifyEditorStyleProvider(string path, SettingsScopes scopes = SettingsScopes.Any)
+        // SettingsScopesが存在しないのでSettingsScopeに変更
+        public ModifyEditorStyleProvider(string path, SettingsScope scopes = SettingsScope.User)
         : base(path, scopes)
         { }
 
