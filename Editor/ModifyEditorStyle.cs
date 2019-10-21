@@ -248,7 +248,7 @@ public class ModifyEditorStyle
     private class ModifyEditorStyleProvider : SettingsProvider
     {
         // SettingsScopesが存在しないのでSettingsScopeに変更
-        public ModifyEditorStyleProvider(string path, SettingsScope scopes = SettingsScope.User)
+        public ModifyEditorStyleProvider(string path, SettingsScope scopes = SettingsScope.Project)
         : base(path, scopes)
         { }
 
